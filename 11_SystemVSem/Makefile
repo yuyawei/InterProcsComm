@@ -1,6 +1,6 @@
 include ../Make.defines
 
-PROGS = semcreate semrmid semsetvalues SemGetVal SemOps
+PROGS = semcreate semrmid semsetvalues SemGetVal SemOps #limit
 	
 all:	${PROGS}
 
@@ -14,6 +14,8 @@ SemGetVal:	SemGetVal.o
 		${CC} ${CFLAGS} -o $@ SemGetVal.o ${LIBS}
 SemOps:		SemOps.o
 		${CC} ${CFLAGS} -o $@ SemOps.o ${LIBS}
+limit:		limit.o
+		${CC} ${CFLAGS} -o $@ limit.o ${LIBS}
 
 clean:
 		rm -f ${PROGS} ${CLEANFILES}
