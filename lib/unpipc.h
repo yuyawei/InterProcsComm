@@ -152,6 +152,8 @@ union semun {				/* define union for semctl() */
 /*增加*/
 #define MSG_R 0400
 #define MSG_W 0200
+#define SEM_R 0400
+#define SEM_A 0200
 #define	SVMSG_MODE	(MSG_R | MSG_W | MSG_R>>3 | MSG_R>>6)
 					/* default permissions for new SV message queues */
 /* $$.ix [SVMSG_MODE]~constant,~definition~of$$ */
