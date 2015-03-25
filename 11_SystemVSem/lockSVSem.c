@@ -46,6 +46,7 @@ void my_lock(int fd)
 		waitop.sem_op = -1;
 		waitop.sem_flg = SEM_UNDO;
 	}
+
 	Semop(semid, &waitop, 1);
 }
 
